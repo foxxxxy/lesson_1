@@ -1,0 +1,32 @@
+ul {
+  li {
+    display: inline-block;
+
+
+    figure {
+      width: 300px;
+      height: 90px;
+      font-size: 0;
+      @include clearfix;
+
+
+      img {
+        float: left;
+        margin-right: 20px;
+
+      }
+      figcaption {
+        p {
+          overflow: hidden;
+          font: 12px "Lato Regular", sans-serif;
+          line-height: 19px;
+        }
+        ul {
+          li {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

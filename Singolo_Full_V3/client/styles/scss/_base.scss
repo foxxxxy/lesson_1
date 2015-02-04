@@ -1,0 +1,223 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+* {
+  font: lighter 18px "Lato Light", sans-serif;
+  text-align: justify;
+}
+
+body {
+  width: 100%;
+
+  .container {
+    width: 1020px;
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 100%;
+    max-height: 600px;
+    padding: 55px 0;
+    border-bottom: 5px solid #ea676b;
+    background-color: #eb5055;
+
+    .royalSlider {
+      width: 100%;
+    }
+  }
+
+  .services {
+    height: 100%;
+    max-height: 495px;
+    border-bottom: 5px solid #fff;
+    background-color: #f2f2f2;
+
+    .container {
+      & > p {
+        line-height: 30px;
+      }
+
+      ul {
+        li {
+          margin: 20px 36px 20px 0;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    height: 100%;
+    max-height: 865px;
+    border-bottom: 5px solid #373b4a;
+    background-color: #303441;
+
+    ul {
+      li {
+        margin: 0 5px 15px 0;
+        padding: 0 5px;
+        border: 1px solid #666d89;
+        @include border-radius(5px);
+        @include transition-property(all);
+        @include transition-duration(700ms);
+
+        &:hover {
+          border-color: #fff;
+          @include opacity(0.9);
+
+        }
+
+        a {
+          font-size: 12px;
+          text-transform: capitalize;
+          text-decoration: none;
+          color: #666d89;
+
+          &:hover {
+            color: #fff;
+            @include opacity(0.9);
+
+          }
+        }
+      }
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 0 20px 20px 10px;
+
+      &:hover {
+        figcaption {
+          right: 0;
+        }
+      }
+
+      figcaption {
+        position: absolute;
+        top: 0;
+        right: -250px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#EDC9AF, 0.7);
+        @include transition-property(all);
+        @include transition-duration(800ms);
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .about-us {
+    height: 100%;
+    max-height: 730px;
+    border-bottom: 5px solid #fff;
+    background-color: #f2f2f2;
+
+    .container {
+      & > p {
+        line-height: 30px;
+      }
+    }
+
+    figure {
+      display: inline-block;
+      width: 300px;
+      height: 450px;
+      margin: 0 35px 0 0;
+
+      figcaption {
+        p {
+          font: 12px "Lato Regular", sans-serif;
+          line-height: 19px;
+
+        }
+
+        ul {
+          li {
+            padding-top: 10px;
+
+            a {
+              img {
+                border-radius: 50%;
+                border: 3px solid #666d89;
+                &:hover {
+                  @include scale(1.5);
+                  @include opacity(0.8);
+                }
+                @include transition-property(all);
+                @include transition-duration(800ms);
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .quote {
+    height: 100%;
+    max-height: 700px;
+    border-bottom: 5px solid #ea676b;
+    background-color: #eb5055;
+    @include clearfix;
+
+    .container {
+      & > p {
+        line-height: 30px;
+        color: #fff;
+      }
+    }
+    h2 {
+      color: #fff;
+      span {
+        text-transform: lowercase;
+      }
+    }
+
+    .contacts {
+      float: right;
+      width: 330px;
+      margin-top: 15px;
+      color: #fff;
+      h3 {
+        color: #fff;
+      }
+      p {
+        font: 12px "Lato Regular", sans-serif;
+        line-height: 19px;
+        color: #fff;
+      }
+      ul {
+        margin-top: 30px;
+        li {
+          display: block;
+          font: 12px "Lato Regular", sans-serif;
+          line-height: 19px;
+          color: #fff;
+          a {
+            text-decoration: none;
+            color: #fff;
+            @include transition-property(all);
+            @include transition-duration(800ms);
+
+            &:hover {
+              color: #a33a3e;
+              @include opacity(0.8);
+            }
+          }
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

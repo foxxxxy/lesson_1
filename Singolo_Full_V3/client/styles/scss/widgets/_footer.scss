@@ -1,0 +1,51 @@
+footer {
+  height: 100%;
+  max-height: 75px;
+  padding: 30px 40px;
+  background-color: #303441;
+  font: 12px "Lato Regular", sans-serif;
+  @include clearfix;
+
+  nav {
+    p {
+      float: left;
+      padding-top: 10px;
+
+      a:before {
+        margin-right: 5px;
+        content: "·";
+      }
+      a {
+        text-decoration: none;
+        color: #767e9e;
+        @include transition-property(all);
+        @include transition-duration(600ms);
+
+        &:hover {
+          color: #fff;
+          @include opacity(0.8);
+        }
+      }
+    }
+    ul {
+      float: right;
+      li {
+        float: left;
+        padding-right: 5px;
+
+        img {
+          border: 3px solid #666d89;
+          border-radius: 100px;
+
+          &:hover {
+            @include scale(1.5);
+            @include opacity(0.5);
+
+          }
+          @include transition-property(all);
+          @include transition-duration(600ms);
+        }
+      }
+    }
+  }
+}

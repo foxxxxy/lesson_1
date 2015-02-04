@@ -1,0 +1,28 @@
+input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin: 15px 0;
+  padding: 5px 0 0 10px;
+  border: none;
+  background-color: #ca4549;
+  @include border-radius(5px);
+
+  &::-webkit-input-placeholder {
+    font: 12px "Lato Regular", sans-serif;
+    color: #f48c8f;
+  }
+  &::-moz-placeholder {
+    font: 12px "Lato Regular", sans-serif;
+    color: #f48c8f;
+  }
+  &:-moz-placeholder {
+    font: 12px "Lato Regular", sans-serif;
+    color: #f48c8f;
+  }
+  &:-ms-input-placeholder {
+    font: 12px "Lato Regular", sans-serif;
+    color: #f48c8f;
+  }
+
+}
