@@ -1,0 +1,1516 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/* line 17, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* v1.0.5 */
+/* Core RS CSS file. 95% of time you shouldn't change anything here. */
+/* line 3, ../scss/lib/_rs.scss */
+.royalSlider {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  direction: ltr;
+}
+
+/* line 9, ../scss/lib/_rs.scss */
+.royalSlider > * {
+  float: left;
+}
+
+/* line 13, ../scss/lib/_rs.scss */
+.rsWebkit3d .rsSlide {
+  -webkit-transform: translateZ(0);
+}
+
+/* line 27, ../scss/lib/_rs.scss */
+.rsWebkit3d .rsSlide,
+.rsWebkit3d .rsContainer,
+.rsWebkit3d .rsThumbs,
+.rsWebkit3d .rsPreloader,
+.rsWebkit3d img,
+.rsWebkit3d .rsOverflow,
+.rsWebkit3d .rsBtnCenterer,
+.rsWebkit3d .rsAbsoluteEl,
+.rsWebkit3d .rsABlock,
+.rsWebkit3d .rsLink {
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 32, ../scss/lib/_rs.scss */
+.rsFade.rsWebkit3d .rsSlide,
+.rsFade.rsWebkit3d img,
+.rsFade.rsWebkit3d .rsContainer {
+  -webkit-transform: none;
+}
+
+/* line 35, ../scss/lib/_rs.scss */
+.rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 43, ../scss/lib/_rs.scss */
+.rsVisibleNearbyWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 52, ../scss/lib/_rs.scss */
+.rsVisibleNearbyWrap .rsOverflow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 58, ../scss/lib/_rs.scss */
+.rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 66, ../scss/lib/_rs.scss */
+.rsArrow,
+.rsThumbsArrow {
+  cursor: pointer;
+}
+
+/* line 70, ../scss/lib/_rs.scss */
+.rsThumb {
+  float: left;
+  position: relative;
+}
+
+/* line 78, ../scss/lib/_rs.scss */
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+/* line 85, ../scss/lib/_rs.scss */
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+
+/* line 95, ../scss/lib/_rs.scss */
+.rsGCaption {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+/* Fullscreen options, very important ^^ */
+/* line 102, ../scss/lib/_rs.scss */
+.royalSlider.rsFullscreen {
+  position: fixed !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+/* line 115, ../scss/lib/_rs.scss */
+.royalSlider .rsSlide.rsFakePreloader {
+  opacity: 1 !important;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  display: none;
+}
+
+/* line 124, ../scss/lib/_rs.scss */
+.rsSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 136, ../scss/lib/_rs.scss */
+.royalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+  height: auto;
+}
+
+/* line 140, ../scss/lib/_rs.scss */
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 146, ../scss/lib/_rs.scss */
+.rsPreloader {
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 151, ../scss/lib/_rs.scss */
+.rsNav {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* line 156, ../scss/lib/_rs.scss */
+.rsNavItem {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 160, ../scss/lib/_rs.scss */
+.rsThumbs {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  z-index: 22;
+}
+
+/* line 167, ../scss/lib/_rs.scss */
+.rsTabs {
+  float: left;
+  background: none !important;
+}
+
+/* line 172, ../scss/lib/_rs.scss */
+.rsTabs,
+.rsThumbs {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 178, ../scss/lib/_rs.scss */
+.rsVideoContainer {
+  /*left: 0;
+  top: 0;
+  position: absolute;*/
+  /*width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;*/
+  width: auto;
+  height: auto;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 193, ../scss/lib/_rs.scss */
+.rsVideoFrameHolder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #141414;
+  opacity: 0;
+  -webkit-transition: .3s;
+}
+
+/* line 201, ../scss/lib/_rs.scss */
+.rsVideoFrameHolder.rsVideoActive {
+  opacity: 1;
+}
+
+/* line 207, ../scss/lib/_rs.scss */
+.rsVideoContainer iframe,
+.rsVideoContainer video,
+.rsVideoContainer embed,
+.rsVideoContainer .rsVideoObj {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ios controls over video bug, shifting video */
+/* line 218, ../scss/lib/_rs.scss */
+.rsVideoContainer.rsIOSVideo iframe,
+.rsVideoContainer.rsIOSVideo video,
+.rsVideoContainer.rsIOSVideo embed {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 44px;
+}
+
+/* line 225, ../scss/lib/_rs.scss */
+.rsABlock {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 15;
+}
+
+/* line 233, ../scss/lib/_rs.scss */
+img.rsImg {
+  max-width: none;
+}
+
+/* line 237, ../scss/lib/_rs.scss */
+.grab-cursor {
+  cursor: url(../../images/slider/grab.png) 8 8, move;
+}
+
+/* line 241, ../scss/lib/_rs.scss */
+.grabbing-cursor {
+  cursor: url(../../images/slider/grabbing.png) 8 8, move;
+}
+
+/* line 245, ../scss/lib/_rs.scss */
+.rsNoDrag {
+  cursor: auto;
+}
+
+/* line 249, ../scss/lib/_rs.scss */
+.rsLink {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 20;
+  background: url(../../images/slider/blank.gif);
+}
+
+/******************************
+*
+*  RoyalSlider Default Skin
+*
+*    1. Arrows
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*
+*  Sprite: 'rs-default.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+*
+******************************/
+/* Background */
+/* line 25, ../scss/lib/_rs-default.scss */
+.rsDefault,
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+  color: #FFF;
+}
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+/* line 35, ../scss/lib/_rs-default.scss */
+.rsDefault .rsArrow {
+  height: 100%;
+  width: 44px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21;
+}
+
+/* line 44, ../scss/lib/_rs-default.scss */
+.rsDefault.rsVer .rsArrow {
+  width: 100%;
+  height: 44px;
+}
+
+/* line 50, ../scss/lib/_rs-default.scss */
+.rsDefault.rsVer .rsArrowLeft {
+  top: 0;
+  left: 0;
+}
+
+/* line 55, ../scss/lib/_rs-default.scss */
+.rsDefault.rsVer .rsArrowRight {
+  bottom: 0;
+  left: 0;
+}
+
+/* line 60, ../scss/lib/_rs-default.scss */
+.rsDefault.rsHor .rsArrowLeft {
+  left: 0;
+  top: 0;
+}
+
+/* line 65, ../scss/lib/_rs-default.scss */
+.rsDefault.rsHor .rsArrowRight {
+  right: 0;
+  top: 0;
+}
+
+/* line 70, ../scss/lib/_rs-default.scss */
+.rsDefault .rsArrowIcn {
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+  position: absolute;
+  cursor: pointer;
+  background: url("../../images/slider/rs-default.png");
+  border-radius: 2px;
+}
+
+/* line 89, ../scss/lib/_rs-default.scss */
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
+  background-position: -64px -32px;
+}
+
+/* line 93, ../scss/lib/_rs-default.scss */
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn {
+  background-position: -64px -64px;
+}
+
+/* line 97, ../scss/lib/_rs-default.scss */
+.rsDefault.rsVer .rsArrowLeft .rsArrowIcn {
+  background-position: -96px -32px;
+}
+
+/* line 101, ../scss/lib/_rs-default.scss */
+.rsDefault.rsVer .rsArrowRight .rsArrowIcn {
+  background-position: -96px -64px;
+}
+
+/* line 105, ../scss/lib/_rs-default.scss */
+.rsDefault .rsArrowDisabled .rsArrowIcn {
+  opacity: .2;
+  filter: alpha(opacity=20);
+  *display: none;
+}
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+/* line 117, ../scss/lib/_rs-default.scss */
+.rsDefault .rsBullets {
+  position: absolute;
+  z-index: 35;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 8px;
+  overflow: hidden;
+}
+
+/* line 134, ../scss/lib/_rs-default.scss */
+.rsDefault .rsBullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 6px 5px 6px;
+}
+
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+/* line 162, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsHor {
+  width: 100%;
+  height: 72px;
+}
+
+/* line 167, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsVer {
+  width: 96px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 175, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsHor .rsThumbsContainer {
+  position: relative;
+  height: 100%;
+}
+
+/* line 180, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* line 185, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumb {
+  float: left;
+  overflow: hidden;
+  width: 96px;
+  height: 72px;
+}
+
+/* line 192, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumb img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 197, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumb.rsNavSelected {
+  background: #02874a;
+}
+
+/* line 201, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumb.rsNavSelected img {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+/* line 206, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTmb {
+  display: block;
+}
+
+/* Thumbnails with text */
+/* line 211, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTmb h5 {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
+  color: #FFF;
+}
+
+/* line 219, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTmb span {
+  color: #DDD;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* Thumbnails arrow icons */
+/* line 228, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsArrow {
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21;
+  background: #000;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* line 239, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsArrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 243, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsArrow {
+  width: 100%;
+  height: 20px;
+}
+
+/* line 248, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft {
+  top: 0;
+  left: 0;
+}
+
+/* line 253, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight {
+  bottom: 0;
+  left: 0;
+}
+
+/* line 258, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft {
+  left: 0;
+  top: 0;
+}
+
+/* line 263, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight {
+  right: 0;
+  top: 0;
+}
+
+/* line 268, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsArrowIcn {
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+  position: absolute;
+  cursor: pointer;
+  background: url("../../images/slider/rs-default.png");
+}
+
+/* line 280, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
+  background-position: -128px -32px;
+}
+
+/* line 284, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn {
+  background-position: -128px -48px;
+}
+
+/* line 288, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn {
+  background-position: -144px -32px;
+}
+
+/* line 292, ../scss/lib/_rs-default.scss */
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn {
+  background-position: -144px -48px;
+}
+
+/* line 296, ../scss/lib/_rs-default.scss */
+.rsDefault .rsThumbsArrowDisabled {
+  display: none !important;
+}
+
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  /* line 302, ../scss/lib/_rs-default.scss */
+  .rsDefault .rsThumb {
+    width: 59px;
+    height: 44px;
+  }
+
+  /* line 306, ../scss/lib/_rs-default.scss */
+  .rsDefault .rsThumbsHor {
+    height: 44px;
+  }
+
+  /* line 309, ../scss/lib/_rs-default.scss */
+  .rsDefault .rsThumbsVer {
+    width: 59px;
+  }
+}
+/***************
+*
+*  4. Tabs
+*
+****************/
+/* line 320, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTabs {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 12px;
+  position: relative;
+}
+
+/* line 330, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTab {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  height: auto;
+  width: auto;
+  color: #333;
+  padding: 5px 13px 6px;
+  min-width: 72px;
+  border: 1px solid #D9D9DD;
+  border-right: 1px solid #f5f5f5;
+  text-decoration: none;
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(top, #fefefe, #f4f4f4);
+  background-image: -moz-linear-gradient(top, #fefefe, #f4f4f4);
+  background-image: linear-gradient(to bottom, #fefefe, #f4f4f4);
+  -webkit-box-shadow: inset 1px 0 0 #fff;
+  box-shadow: inset 1px 0 0 #fff;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 355, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTab:first-child {
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 362, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTab:last-child {
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #cfcfcf;
+}
+
+/* line 371, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTab:active {
+  border: 1px solid #D9D9DD;
+  background-color: #f4f4f4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* line 377, ../scss/lib/_rs-default.scss */
+.rsDefault .rsTab.rsNavSelected {
+  color: #FFF;
+  border: 1px solid #999;
+  text-shadow: 1px 1px #838383;
+  box-shadow: 0 1px 9px rgba(102, 102, 102, 0.65) inset;
+  background: #ACACAC;
+  background-image: -webkit-linear-gradient(top, #acacac, #bbbbbb);
+  background-image: -moz-llinear-gradient(top, #acacac, #bbbbbb);
+  background-image: linear-gradient(to bottom, #acacac, #bbbbbb);
+}
+
+/***************
+*
+*  5. Fullscreen button
+*
+****************/
+/* line 394, ../scss/lib/_rs-default.scss */
+.rsDefault .rsFullscreenBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 22;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* line 406, ../scss/lib/_rs-default.scss */
+.rsDefault .rsFullscreenIcn {
+  display: block;
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  background: url("../../images/slider/rs-default.png") 0 0;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  *background-color: #000;
+  border-radius: 2px;
+}
+
+/* line 420, ../scss/lib/_rs-default.scss */
+.rsDefault .rsFullscreenIcn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* line 424, ../scss/lib/_rs-default.scss */
+.rsDefault.rsFullscreen .rsFullscreenIcn {
+  background-position: -32px 0;
+}
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+/* line 434, ../scss/lib/_rs-default.scss */
+.rsDefault .rsPlayBtn {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  margin-top: -32px;
+  cursor: pointer;
+}
+
+/* line 443, ../scss/lib/_rs-default.scss */
+.rsDefault .rsPlayBtnIcon {
+  width: 64px;
+  display: block;
+  height: 64px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  background: url(../../images/slider/rs-default.png) no-repeat 0 -32px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  *background-color: #000;
+}
+
+/* line 460, ../scss/lib/_rs-default.scss */
+.rsDefault .rsPlayBtn:hover .rsPlayBtnIcon {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* line 464, ../scss/lib/_rs-default.scss */
+.rsDefault .rsBtnCenterer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+/* line 470, ../scss/lib/_rs-default.scss */
+.rsDefault .rsCloseVideoBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 500;
+  position: absolute;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+/* line 483, ../scss/lib/_rs-default.scss */
+.rsDefault .rsCloseVideoBtn.rsiOSBtn {
+  top: -38px;
+  right: -6px;
+}
+
+/* line 488, ../scss/lib/_rs-default.scss */
+.rsDefault .rsCloseVideoIcn {
+  margin: 6px;
+  width: 32px;
+  height: 32px;
+  background: url("../../images/slider/rs-default.png") -64px 0;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  *background-color: #000;
+}
+
+/* line 498, ../scss/lib/_rs-default.scss */
+.rsDefault .rsCloseVideoIcn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+/* line 508, ../scss/lib/_rs-default.scss */
+.rsDefault .rsPreloader {
+  width: 20px;
+  height: 20px;
+  background-image: url(../image/slider/preloader-white.gif);
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+/***************
+*
+*  8. Global caption
+*
+****************/
+/* line 524, ../scss/lib/_rs-default.scss */
+.rsDefault .rsGCaption {
+  position: absolute;
+  float: none;
+  bottom: 6px;
+  left: 6px;
+  text-align: left;
+  background: black;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFF;
+  padding: 2px 8px;
+  width: auto;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+/* line 3, ../scss/_base.scss */
+* {
+  font: lighter 18px "Lato", sans-serif;
+  color: #666d89;
+}
+
+/* line 8, ../scss/_base.scss */
+body {
+  width: 100%;
+}
+/* line 11, ../scss/_base.scss */
+body .container {
+  width: 1020px;
+  margin: 0 auto;
+}
+/* line 16, ../scss/_base.scss */
+body h2 {
+  padding: 67px 0 33px 0;
+}
+/* line 20, ../scss/_base.scss */
+body h3 {
+  padding-bottom: 15px;
+}
+/* line 24, ../scss/_base.scss */
+body p {
+  padding-bottom: 50px;
+}
+
+/* line 1, ../scss/components/_headings.scss */
+h2 {
+  font: bold 30px "Lato", sans-serif;
+  text-transform: capitalize;
+  color: #666d89;
+}
+
+/* line 7, ../scss/components/_headings.scss */
+h3 {
+  font: bold 18px "Lato", sans-serif;
+  text-transform: capitalize;
+  color: #666d89;
+}
+
+/* line 1, ../scss/components/_text.scss */
+p {
+  color: #767e9e;
+}
+
+/* line 3, ../scss/components/_social-buttons.scss */
+.social-buttons ul li {
+  display: inline-block;
+}
+/* line 6, ../scss/components/_social-buttons.scss */
+.social-buttons ul li a img {
+  margin: 0 10px 5px 1px;
+  border-radius: 50%;
+  border: 1px solid #666d89;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 13, ../scss/components/_social-buttons.scss */
+.social-buttons ul li a img:hover {
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 1, ../scss/components/_button.scss */
+button {
+  display: block;
+  height: 35px;
+  margin: 15px 0;
+  padding: 5px 0 0 10px;
+  border: 1px dotted #fff;
+  background-color: #ca4549;
+  color: #f48c8f;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 13, ../scss/components/_button.scss */
+button:hover {
+  background-color: #a33a3e;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 1, ../scss/components/_input.scss */
+input {
+  display: block;
+  height: 35px;
+  margin: 15px 0;
+  border: none;
+  background-color: #ca4549;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 3, ../scss/mixins/_placeholder.scss */
+input::-webkit-input-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+/* line 9, ../scss/mixins/_placeholder.scss */
+input::-moz-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+/* line 15, ../scss/mixins/_placeholder.scss */
+input:-ms-input-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+
+/* line 1, ../scss/components/_textarea.scss */
+textarea {
+  height: 185px;
+  border: none;
+  background-color: #ca4549;
+  resize: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 3, ../scss/mixins/_placeholder.scss */
+textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+/* line 9, ../scss/mixins/_placeholder.scss */
+textarea::-moz-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+/* line 15, ../scss/mixins/_placeholder.scss */
+textarea:-ms-input-placeholder {
+  font-size: 12px;
+  font: '"Lato", sans-serif';
+  color: #f48c8f;
+}
+
+/* line 1, ../scss/widgets/_header.scss */
+header {
+  border-bottom: 5px solid #373b4a;
+  background-color: #303441;
+  font: bold 12px "Lato", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 7, ../scss/widgets/_header.scss */
+header nav {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 10, ../scss/widgets/_header.scss */
+header nav > a {
+  float: left;
+  font: bold 25px "Lato", sans-serif;
+  line-height: 80px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 18, ../scss/widgets/_header.scss */
+header nav > a span {
+  color: #ee5052;
+}
+/* line 22, ../scss/widgets/_header.scss */
+header nav ul {
+  float: right;
+  font-size: 0;
+}
+/* line 25, ../scss/widgets/_header.scss */
+header nav ul li {
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 90px;
+  text-transform: uppercase;
+}
+/* line 33, ../scss/widgets/_header.scss */
+header nav ul li::after {
+  margin-left: 10px;
+  color: #414557;
+  content: "·";
+}
+/* line 39, ../scss/widgets/_header.scss */
+header nav ul li:last-child::after {
+  content: "";
+}
+/* line 43, ../scss/widgets/_header.scss */
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+  -o-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+/* line 49, ../scss/widgets/_header.scss */
+header nav ul li a:hover {
+  color: #eb5055;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/* line 1, ../scss/widgets/_footer.scss */
+footer {
+  background-color: #303441;
+  font: 12px "Lato", sans-serif;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 8, ../scss/widgets/_footer.scss */
+footer nav > p {
+  float: left;
+  padding: 0;
+  line-height: 70px;
+}
+/* line 13, ../scss/widgets/_footer.scss */
+footer nav > p a:before {
+  margin-right: 5px;
+  content: "·";
+}
+/* line 18, ../scss/widgets/_footer.scss */
+footer nav > p a {
+  text-decoration: none;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+  -o-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+/* line 23, ../scss/widgets/_footer.scss */
+footer nav > p a:hover {
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 30, ../scss/widgets/_footer.scss */
+footer nav .social-buttons {
+  float: right;
+  padding-top: 15px;
+}
+
+/* line 1, ../scss/widgets/_figure.scss */
+figure {
+  font-size: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 5, ../scss/widgets/_figure.scss */
+figure img {
+  float: left;
+}
+/* line 9, ../scss/widgets/_figure.scss */
+figure figcaption {
+  float: right;
+  width: 220px;
+}
+/* line 12, ../scss/widgets/_figure.scss */
+figure figcaption p {
+  font: 12px "Lato", sans-serif;
+  line-height: 19px;
+  text-align: justify;
+}
+
+/* line 2, ../scss/layouts/_landing.scss */
+.landing .slider {
+  border-bottom: 5px solid #ea676b;
+  background-color: #eb5055;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 7, ../scss/layouts/_landing.scss */
+.landing .slider .royalSlider {
+  width: 100%;
+  padding: 50px 0 60px;
+}
+/* line 13, ../scss/layouts/_landing.scss */
+.landing .services {
+  border-bottom: 5px solid #fff;
+  background-color: #f2f2f2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 19, ../scss/layouts/_landing.scss */
+.landing .services .container > p {
+  line-height: 30px;
+}
+/* line 23, ../scss/layouts/_landing.scss */
+.landing .services .container ul {
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+/* line 27, ../scss/layouts/_landing.scss */
+.landing .services .container ul li {
+  display: inline-block;
+  width: 300px;
+  height: 90px;
+  margin-right: 20px;
+}
+/* line 34, ../scss/layouts/_landing.scss */
+.landing .services .container ul li figure img {
+  border: 2px solid #666d89;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 44, ../scss/layouts/_landing.scss */
+.landing .portfolio {
+  border-bottom: 5px solid #373b4a;
+  background-color: #303441;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 51, ../scss/layouts/_landing.scss */
+.landing .portfolio .container > p {
+  padding-bottom: 20px;
+}
+/* line 57, ../scss/layouts/_landing.scss */
+.landing .portfolio .container ul li {
+  display: inline-block;
+  margin-right: 10px;
+  padding-bottom: 3px;
+  border: 1px solid #666d89;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 600ms;
+  -moz-transition-duration: 600ms;
+  -o-transition-duration: 600ms;
+  transition-duration: 600ms;
+}
+/* line 66, ../scss/layouts/_landing.scss */
+.landing .portfolio .container ul li:hover {
+  border-color: #fff;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+/* line 71, ../scss/layouts/_landing.scss */
+.landing .portfolio .container ul li:hover a {
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+/* line 77, ../scss/layouts/_landing.scss */
+.landing .portfolio .container ul li a {
+  padding: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+/* line 87, ../scss/layouts/_landing.scss */
+.landing .portfolio .container .wrapper {
+  margin: 20px 0 45px;
+  font-size: 0;
+}
+/* line 91, ../scss/layouts/_landing.scss */
+.landing .portfolio .container .wrapper figure {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 20px 20px 0;
+}
+/* line 98, ../scss/layouts/_landing.scss */
+.landing .portfolio .container .wrapper figure:hover figcaption {
+  right: 0;
+}
+/* line 103, ../scss/layouts/_landing.scss */
+.landing .portfolio .container .wrapper figure figcaption {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(237, 201, 175, 0.7);
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 120, ../scss/layouts/_landing.scss */
+.landing .about-us {
+  border-bottom: 5px solid #fff;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 128, ../scss/layouts/_landing.scss */
+.landing .about-us .container > p {
+  line-height: 30px;
+}
+/* line 132, ../scss/layouts/_landing.scss */
+.landing .about-us .container .wrapper {
+  padding-bottom: 60px;
+  font-size: 0;
+}
+/* line 136, ../scss/layouts/_landing.scss */
+.landing .about-us .container .wrapper figure {
+  display: inline-block;
+  width: 300px;
+  height: 455px;
+  margin-right: 20px;
+}
+/* line 142, ../scss/layouts/_landing.scss */
+.landing .about-us .container .wrapper figure figcaption {
+  float: left;
+  width: 300px;
+}
+/* line 146, ../scss/layouts/_landing.scss */
+.landing .about-us .container .wrapper figure figcaption h3 {
+  margin-top: 20px;
+}
+/* line 149, ../scss/layouts/_landing.scss */
+.landing .about-us .container .wrapper figure figcaption p {
+  padding-bottom: 25px;
+}
+/* line 157, ../scss/layouts/_landing.scss */
+.landing .quote {
+  border-bottom: 5px solid #ea676b;
+  background-color: #eb5055;
+  overflow: hidden;
+  *zoom: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+/* line 164, ../scss/layouts/_landing.scss */
+.landing .quote .container > p {
+  padding-bottom: 35px;
+  line-height: 30px;
+  color: #fff;
+}
+/* line 169, ../scss/layouts/_landing.scss */
+.landing .quote .container h2 {
+  color: #fff;
+}
+/* line 172, ../scss/layouts/_landing.scss */
+.landing .quote .container h2 span {
+  text-transform: lowercase;
+  color: #fff;
+}
+/* line 177, ../scss/layouts/_landing.scss */
+.landing .quote .container form {
+  float: left;
+  width: 635px;
+  margin-right: 20px;
+  padding-bottom: 50px;
+  font-size: 0;
+}
+/* line 183, ../scss/layouts/_landing.scss */
+.landing .quote .container form input {
+  width: 620px;
+  padding-left: 15px;
+}
+/* line 187, ../scss/layouts/_landing.scss */
+.landing .quote .container form textarea {
+  width: 619px;
+  padding: 15px 0 0 15px;
+}
+/* line 192, ../scss/layouts/_landing.scss */
+.landing .quote .container form button {
+  float: left;
+  width: 100%;
+}
+/* line 197, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts {
+  float: right;
+  width: 300px;
+  margin-top: 15px;
+}
+/* line 202, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts h3 {
+  color: #fff;
+}
+/* line 205, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts > p {
+  padding-bottom: 30px;
+  font: 12px "Lato", sans-serif;
+  line-height: 19px;
+  text-align: justify;
+  color: #fff;
+}
+/* line 214, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts ul li {
+  display: block;
+  font: 12px "Lato", sans-serif;
+  line-height: 19px;
+  color: #fff;
+}
+/* line 220, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts ul li img {
+  margin-right: 10px;
+}
+/* line 224, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts ul li a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+}
+/* line 230, ../scss/layouts/_landing.scss */
+.landing .quote .container .contacts ul li a:hover {
+  color: #a33a3e;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}

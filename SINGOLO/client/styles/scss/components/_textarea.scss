@@ -1,0 +1,8 @@
+textarea {
+  height: 185px;
+  border: none;
+  background-color: #ca4549;
+  resize: none;
+  @include border-radius(5px);
+  @include placeholder(12px, '"Lato", sans-serif', #f48c8f);
+}

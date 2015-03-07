@@ -1,0 +1,57 @@
+header {
+  border-bottom: 5px solid #373b4a;
+  background-color: #303441;
+  font: bold 12px "Lato", sans-serif;
+  @include user-select(none);
+
+  nav {
+    @include clearfix;
+
+    & > a {
+      float: left;
+      font: bold 25px "Lato", sans-serif;
+      line-height: 80px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+
+      span {
+        color: #ee5052;
+      }
+    }
+    ul {
+      float: right;
+      font-size: 0;
+      li {
+        float: left;
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 12px;
+        line-height: 90px;
+        text-transform: uppercase;
+
+        &::after {
+          margin-left: 10px;
+          color: #414557;
+          content: "·";
+        }
+
+        &:last-child::after {
+          content: "";
+        }
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          @include transition-property(all);
+          @include transition-duration(600ms);
+
+          &:hover {
+            color: #eb5055;
+            @include opacity(0.9);
+          }
+        }
+      }
+    }
+  }
+}

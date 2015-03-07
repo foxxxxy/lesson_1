@@ -1,0 +1,21 @@
+.social-buttons {
+  ul {
+    li {
+      display: inline-block;
+      a {
+        img {
+          margin: 0 10px 5px 1px;
+          border-radius: 50%;
+          border: 1px solid #666d89;
+          @include transition-property(all);
+          @include transition-duration(800ms);
+
+          &:hover {
+            @include scale(1.5);
+            @include opacity(0.8);
+          }
+        }
+      }
+    }
+  }
+}

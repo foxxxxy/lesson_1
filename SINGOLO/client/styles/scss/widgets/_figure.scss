@@ -1,0 +1,18 @@
+figure {
+  font-size: 0;
+  @include clearfix;
+
+  img {
+    float: left;
+  }
+
+  figcaption {
+    float: right;
+    width: 220px;
+    p {
+      font: 12px "Lato", sans-serif;
+      line-height: 19px;
+      text-align: justify;
+    }
+  }
+}

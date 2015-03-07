@@ -1,0 +1,17 @@
+button {
+  display: block;
+  height: 35px;
+  margin: 15px 0;
+  padding: 5px 0 0 10px;
+  border: 1px dotted #fff;
+  background-color: #ca4549;
+  color: #f48c8f;
+  @include border-radius(5px);
+  @include transition-property(all);
+  @include transition-duration(800ms);
+
+  &:hover {
+    background-color: #a33a3e;
+    @include opacity(0.8);
+  }
+}
