@@ -1,0 +1,36 @@
+.arrow {
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  z-index: 1;
+
+  &::after, &::before {
+    margin: auto;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 7.5%;
+    left: -15%;
+    right: 1px;
+    bottom: 0;
+    width: 33%;
+    height: 8%;
+    background: #fff;
+    @include border-radius(5px);
+    @include rotate(45deg);
+  }
+
+  &::before {
+    left: 21%;
+    @include rotate(315deg);
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .5);
+  }
+}

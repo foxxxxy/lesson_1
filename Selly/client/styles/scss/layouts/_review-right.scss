@@ -1,0 +1,19 @@
+.review-right {
+  figure {
+    img {
+      float: right;
+    }
+    figcaption {
+      float: left;
+    }
+  }
+}
+
+.review-left{
+  img {
+    float: left;
+  }
+  figcaption {
+    float: right;
+  }
+}

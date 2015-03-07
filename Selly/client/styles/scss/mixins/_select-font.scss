@@ -1,0 +1,4 @@
+@mixin select-font ($weight, $size, $font, $color){
+  font: $weight $size $font;
+  color: $color;
+}

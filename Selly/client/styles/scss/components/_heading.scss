@@ -1,0 +1,23 @@
+h1 {
+  @include select-font(lighter, 48px, "Open Sans"  sans-serif, #fff);
+
+  span {
+    @include select-font(bold, 48px, "Open Sans" sans-serif, #fff);
+  }
+}
+
+h2 {
+  @include select-font(lighter, 18px, "Open Sans"  sans-serif, #fff);
+}
+
+h3 {
+  @include select-font(lighter, 36px, "Open Sans"  sans-serif, #363636);
+}
+
+h5 {
+  @include select-font(italic, 14px, Georgia  sans-serif, #8a8a8a);
+}
+
+p {
+  @include select-font(lighter, 16px, "Open Sans"  sans-serif, #777);
+}
